@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Jersey 15", sans-serif;
+
+}
+body {
+    height: 800px; 
+    border: 0.2px solid rgba(220, 20, 60, 0.222);
+  }
+.box{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(https://images.unsplash.com/photo-1713553680479-5b5949ca780f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzNXx8fGVufDB8fHx8fA%3D%3D);
+}
+.box2{
+    height: 300px;
+    width: 300px;
+    margin-right: 100px;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(https://images.unsplash.com/photo-1619200306614-ff7ec4bfe054?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDExfHx8ZW58MHx8fHx8);
+}
+.biggerbox,.biggerdiv2{
+    display: flex;
+    justify-content: space-around;
+}
+.text{
+    position: relative;
+}
+.text h1{
+    padding: 50px;
+   
+}
+.ballbox{
+    height: 250px;
+    width: 250px;
+    background-color: crimson;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+    padding: 20px;
+}
+nav a:hover{
+    background-color: rgb(89, 88, 88);
+    padding: 20px;
+    border-radius: 12px;
+    color: white;
+}
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 25px 100px;
+    
+}
+.ballbox{
+    position: absolute;
+}
+/*  */
+#loader{
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    transition: all ease 0.7s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loader h1{
+    font-size: 4vw;
+    color: transparent;
+    background: linear-gradient(to right,rgb(247, 194, 96),rgb(233, 185, 168));
+    -webkit-background-clip: text;
+    position: absolute;
+    opacity: 0;
+    animation-name: load;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+}
+#loader h1:nth-child(2){
+    animation-delay: 2s;
+}
+#loader h1:nth-child(3){
+    animation-delay: 3s;
+}
+
+@keyframes load {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@media (max-width:600px) {
+    #loader h1{
+        font-size: 9vw;
+      
+    }
+}
